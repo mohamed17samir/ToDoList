@@ -1,0 +1,25 @@
+﻿@model Done.Models.Todo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+
+<form asp-action="Edit">
+<section class="index">
+ <video src="./pexels-free-creative-stuff-5649206.mp4" autoplay loop muted></video>
+    <h1 class="ss">NOTES</h1>
+   <div class="input1">    
+   <input type="text" id="input-a" placeholder="Title" asp-for="TaskName"/>
+   <textarea class="input-b" asp-for="Ttask" placeholder="Your Note"></textarea>
+   <button class="glow-on-hover" type="submit">Done</button>
+</div>
+</section>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
